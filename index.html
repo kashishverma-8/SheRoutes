@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SheRoutes – Safe Route</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Your CSS file (ADD HERE) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <h1 class="logo">SheRoutes</h1>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#map-section">Routes</a></li>
+    <li><a href="#" onclick="sendSOS()">SOS</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Login</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="https://assets.mixkit.co/videos/preview/mixkit-city-traffic-at-night-with-bokeh-lights-3180-large.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <h2>Safe Routes, Stronger Journeys</h2>
+  <p>AI-powered navigation designed for your safety.</p>
+
+  <div class="buttons">
+    <button class="primary-btn" onclick="scrollToMap()">Find Safe Route</button>
+    <button class="secondary-btn" onclick="sendSOS()">Emergency SOS</button>
+  </div>
+</header>
+
+<section id="map-section" class="container">
+  <h2 class="map-title">Find the Safest Route</h2>
+
+  <div class="map-wrapper">
+    <div class="legend">
+      <b>Route Safety</b><br>
+      <span class="green">●</span> Safest Route<br>
+      <span class="orange">●</span> Medium Safety<br>
+      <span class="red">●</span> Risky Route
+    </div>
+
+    <div id="map"></div>
+  </div>
+</section>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Your JavaScript file (ADD HERE) -->
+<script src="script.js"></script>
+
+</body>
+</html>
